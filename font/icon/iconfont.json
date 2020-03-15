@@ -1,0 +1,86 @@
+{
+  "id": "1456073",
+  "name": "final",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "9556",
+      "name": "抽屉2",
+      "font_class": "chouti2",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "866949",
+      "name": "twitter",
+      "font_class": "twitter",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "1050557",
+      "name": "weichat",
+      "font_class": "daoruweixin",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "1100189",
+      "name": "程序开发",
+      "font_class": "chengxukaifa",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "2113413",
+      "name": "选项",
+      "font_class": "xuanxiang",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "3283474",
+      "name": "邮件",
+      "font_class": "youjian",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "3865281",
+      "name": "文件包",
+      "font_class": "wenjianbao",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "5300947",
+      "name": "weibo",
+      "font_class": "weibo",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "5561441",
+      "name": "web-Facebook",
+      "font_class": "Facebook",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "7334992",
+      "name": "github",
+      "font_class": "git",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "9701671",
+      "name": "方案设计",
+      "font_class": "fangansheji",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    }
+  ]
+}
