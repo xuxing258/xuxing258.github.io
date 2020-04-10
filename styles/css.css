@@ -100,7 +100,7 @@ body {
   width: 195px;
   height: 195px;
   border-radius: 50%;
-  background: url('../images/afei.png') no-repeat 0px -40px / cover;
+  background: url('../images/afei.jpg') no-repeat -19px -13px  / cover;
   filter: contrast(0.72) brightness(1.15) grayscale(0.25);
   margin: 0 auto;
 }
