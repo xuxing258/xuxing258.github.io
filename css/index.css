@@ -26,5 +26,6 @@ a{
   width:40%;
   right: 0;
   top: 0;
+  z-index:666;
   background:url("../images/0.jpg")no-repeat 0px 0px  / cover
 }
