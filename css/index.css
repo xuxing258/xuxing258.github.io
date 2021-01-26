@@ -16,8 +16,13 @@ h2{
   margin-left: 100px;
   margin-top: 30px;
 }
+.box div{
+  display: inline-block;
+  padding-right: 15px;
+}
 a{
   color: red;
+  text-decoration: none;
 }
 
 #asid{
