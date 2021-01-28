@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;list-style: none;font-family: "微软雅黑";}
+        .list{
+            width: 500px;
+            height: 200px;
+            margin:  50px auto;
+            display: grid;
+            grid-template-columns: 100px 100px 200px 100px;
+            grid-template-rows: 60px 90px;
+            text-align: center;
+            line-height: 60px;
+            
+        }
+        li:nth-child(-n+4){
+            line-height: 58px;
+        }
+        li{
+            border: 1px solid red;
+            border-collapse:collapse;
+            line-height: 88px;
+        }
+        li img{
+            padding-top: 20px;
+        }
+        span{
+            padding: 12px;
+            background-color: rosybrown;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="list">
+        <li>图片</li>
+        <li>单价</li>
+        <li>数量</li>
+        <li>价格</li>
+        <li><img src="https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2472784747,3912572357&fm=26&gp=0.jpg" alt="" width="50px" height="50px"></li>
+        <li id="node">20</li>
+        <li>
+            <span id="span1">-</span>
+            <span id="span2">0</span>
+            <span id="span3">+</span>
+        </li>
+        <li id="node1">
+            0
+        </li>
+    </ul>
+
+    <script>
+        // 简化
+        
+     eval(function(p,a,c,k,e,r){e=String;if('0'.replace(0,e)==0){while(c--)r[e(c)]=k[c];k=[function(e){return r[e]||e}];e=function(){return'[1-8]'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('5 1=0;5 6=node.2;span1.7=3(){4(true)};span3.7=3(){4(false)};3 4(8){8?1?1--:1=0:1++;span2.2=1;node1.2=1*6}',[],9,'|num|innerHTML|function|fn|let|no|onclick|bol'.split('|'),0,{}))   
+
+
+    </script>
+
+</body>
+</html>
