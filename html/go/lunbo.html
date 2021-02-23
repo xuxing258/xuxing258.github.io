@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="描述">
+    <meta name="author" content="Fly老师">
+    <style>
+        body{font-family: "Microsoft YaHei",serif;}
+        body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+        ol,ul,li{margin:0;padding:0;list-style:none;}
+        img{border:none;}
+
+        #wrap{
+            position: relative;
+            width: 820px;
+            height: 390px;
+            margin: 50px auto 0;
+            user-select: none;
+        }
+        #img{
+            position: relative;
+            width: 100%;
+            height: 340px;
+        }
+        #img ul{
+            width: 100%;
+            height: 100%;
+        }
+        #img li{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #img li.show{
+            display: block;
+        }
+        #tab{
+            overflow: hidden;
+            width: 100%;
+            height: 50px;
+        }
+        #tab ul{
+            width: 200%;
+            height: 100%;
+        }
+        #tab li{
+            float: left;
+            width: 10%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: #000;
+            font-size: 12px;
+            color: #eee;
+            cursor: pointer;
+        }
+
+        #tab li.active{
+            background-color: #303030;
+            color: #e9c06c;
+        }
+
+        #arrow div{
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 60px;
+            margin-top: -30px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 12px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+        #arrow div.left{
+            left: 0;
+        }
+        #arrow div.right{
+            right:0;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <!--图片部分对应的布局-->
+    <div id="img">
+        <ul>
+            <li class="show"><a href=""><img src="https://static.zzhitong.com/lesson-files/javascript/img/5-1/1.jpg" alt=""></a></li>
+            <li><a href=""><img src="https://static.zzhitong.com/lesson-files/javascript/img/5-1/2.jpg" alt=""></a></li>
+            <li><a href=""><img src="https://static.zzhitong.com/lesson-files/javascript/img/5-1/3.jpg" alt=""></a></li>
+            <li><a href=""><img src="https://static.zzhitong.com/lesson-files/javascript/img/5-1/4.jpg" alt=""></a></li>
+            <li><a href=""><img src="https://static.zzhitong.com/lesson-files/javascript/img/5-1/5.jpg" alt=""></a></li>
+        </ul>
+    </div>
+
+    <!--按钮部分对应的布局-->
+    <div id="tab">
+        <ul>
+            <li class="active">开黑吗</li>
+            <li>我亚索贼6</li>
+            <li>只要我E的够快</li>
+            <li>队友的问号</li>
+            <li>就跟不上我</li>
+        </ul>
+    </div>
+
+    <!--左右按钮布局-->
+    <div id="arrow">
+        <div class="left"> < </div>
+        <div class="right"> > </div>
+    </div>
+</div>
+
+<script>
+eval(function(p,a,c,k,e,r){e=function(c){return c.toString(36)};if('0'.replace(0,e)==0){while(c--)r[e(c)]=k[c];k=[function(e){return r[e]||e}];e=function(){return'[3-9a-h]'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('4 5=a.b("#tab g h"),c=a.b("#img g h"),d=a.b("#arrow div"),6=5.length;4 3=0;7 8(x){5[3].9="";c[3].9="";3=x;5[3].9="active";c[3].9="show"}for(4 i=0;i<6;i++){5[i].e=7(){f(3===i)return;8(i)}}d[0].e=7(){4 x=3;x--;f(x<0){x=6-1}8(x)};d[1].e=7(){4 x=3;x++;f(x>=6){x=0}8(x)};',[],18,'|||goudan|let|aTabLi|len|function|change|className|document|querySelectorAll|aImgLi|aArrow|onclick|if|ul|li'.split('|'),0,{}))
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
