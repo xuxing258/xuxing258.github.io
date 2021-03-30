@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body,h1,h2,h3,h4,h5,h6,ul,ol,p{margin:0;font-weight: normal}
+    ul,ol{padding:0; list-style:none;}
+    a{text-decoration: none;}
+    * {
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+    li {
+      list-style: none;
+    }
+    #box {
+      width: 600px;
+      height: 300px;
+      margin: 100px auto 0;
+      position: relative;
+    }
+    #box>span {
+      width: 30px;
+      height: 40px;
+      position: absolute;
+      background-color: #000;
+      opacity: 0.5;
+      cursor: pointer;
+      color: #f2f2f2;
+      font-size: 30px;
+      text-align: center;
+      line-height: 40px;
+      top: 45%;
+    }
+    #box .left {
+      left: 0;
+    }
+    #box .right {
+      right: 0;
+    }
+    #box li{
+      width: 600px;
+      height: 300px;
+      position: absolute;
+      display: none;
+    }
+    #box li img{
+      width: 100%;
+      height: 100%;
+    }
+    #box  p{
+      width: 100%;
+      height: 30px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: red;
+      text-align: center;
+    }
+    #box  p:nth-of-type(2){
+      top: auto;
+      bottom: 0;
+    }
+    #box2 {
+      width: 600px;
+      height: 30px;
+      margin: 50px auto 0;
+      font-size: 0;
+      text-align: center;
+    }
+    #box2 .green{
+      width: 80px;
+      height: 40px;
+      background-color: green;
+      color: #f2f2f2;
+      outline: none;
+      border: 1px solid #000;
+      cursor: pointer;
+    }
+    #box2 .red{
+      width: 80px;
+      height: 40px;
+      background-color: pink;
+      color: red;
+      outline: none;
+      color: #f2f2f2;
+      border: 1px solid #000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <div id="box">
+      <ul>
+        <li><img src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3039545635,3524129605&fm=26&gp=0.jpg"></li>
+        <li><img src="https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1643055503,228471193&fm=26&gp=0.jpg"></li>
+        <li><img src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3045145585,3728269838&fm=26&gp=0.jpg"></li>
+        <li><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2460833260,1692208616&fm=26&gp=0.jpg"></li>
+        <li><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1752893525,46505018&fm=26&gp=0.jpg"></li>
+      </ul>
+      <span class="left">&lt;</span>
+      <span class="right">&gt;</span>
+      <p>1/5</p>
+      <p>喜洋洋</p>
+    </div>
+    <div id="box2">
+      <button class="green">正常模式</button>
+      <button class="red">循环模式</button>
+    </div>
+
+    <script src="../../js/JQuery3.4.1.js"></script>
+    <script>
+      // 数值变化的变量
+      let num =0;
+      // 字体存储
+      let arr = ["喜洋洋","懒洋洋","沸羊羊","美羊羊","暖洋洋"];
+      let $oLi = $("li"),
+      $p = $("p");
+      $oLi.eq(num).show()
+      let  each = true;
+
+      $(".right").click(fun.bind(null,true))
+      $(".left").click(fun.bind(null,false))
+
+      
+      function fun(bol){
+        $oLi.eq(num).hide();
+        bol ? num++ : num--;
+        if(each){
+          num == $oLi.length ? num = 4 : num = num;
+          num == -1 ? num = 0 : num = num;
+        }else{
+          num == $oLi.length ? num = 0 : num = num;
+          num == -1 ? num = 4 : num = num;
+        }
+        $p.eq(0).html(num +1+"/5")
+        $p.eq(1).html(arr[num])
+        $oLi.eq(num).show()
+      }
+
+      $(".red").click(function(){
+        $(this).css("background","green")
+        $(".green").css("background","pink")
+        each =  false
+      })
+
+      $(".green").click(function(){
+        $(this).css("background","green")
+        $(".red").css("background","pink")
+        each = true
+      })
+    </script>
+</body>
+</html>
