@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>moban</title>
+  <style>
+    *{margin: 0;padding: 0;}
+     canvas{
+       display: block;
+       background-color: #000;
+     }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+     /*
+      画布和浏览器等宽 等高
+      画布中一共有200个 小点
+      
+      每个小圆点的基础信息有
+        1. 水平位置x
+        2. 水平位置y
+        3. 圆点的半径r
+        4. 圆点水平速度的speedX
+        5. 圆点垂直速度的speedY
+
+      如何判断两点之前是否连线
+       当两个点之间的距离小于某个值的时候 两点之间连线
+
+      进行移动
+     */
+   
+   
+      function MyCanvas(num) {
+        // 圆点个数
+        this.num = num;
+        // 获取canvas 画笔
+        this.ele = document.getElementById("canvas")
+        this.ctx = this.ele.getContext("2d")
+        // 获取浏览器的宽高
+        this.width =document.documentElement.clientWidth;
+        this.height = document.documentElement.clientHeight;
+        // 设置canvas 宽 高
+        this.ele.width = this.width 
+        this.ele.height = this.height
+        // 存储圆点数据
+        this.data = []
+        // 创建圆点
+        this.init()
+      }
+      MyCanvas.prototype = {
+        init() {
+          // 存储数据函数
+          this.handle()
+          // 移动
+          this.rotate()
+
+          document.addEventListener("mousemove",this.handleMouse.bind(this))
+        console.log(this.arr,this);
+        },
+        // 处理数据
+        handle() {
+          for (let i = 0; i < this.num; i++) {
+            // 存储基础数据 
+            this.data.push({
+              x: Math.random() * this.width,
+              y: Math.random() * this.height,
+              r: Math.random() * 2 + 1,
+              moveX : Math.random() - 0.5,
+              moveY : Math.random() - 0.5,
+            })
+          }
+        },
+        // 循环
+        rotate(){
+          setInterval(this.draw.bind(this),20)
+        },
+        // 绘制圆
+        circle(x, y, r) {
+         
+          // 断开上一次链接
+          this.ctx.beginPath()
+          // 设置画笔颜色
+          this.ctx.fillStyle ="red"
+          // 绘制圆
+          this.ctx.arc(x, y, r, 0*Math.PI, Math.PI * 2,false)
+          // 闭合画笔
+          this.ctx.closePath()
+          // 绘制
+          this.ctx.fill()
+
+        },
+        // 判断两点之间
+        draw() {
+          this.ctx.clearRect(0,0,this.width,this.height)
+          for (let i = 0; i < this.num; i++) {
+            let x1 =  this.data[i].x ,
+            y1 = this.data[i].y ,
+            r1 = this.data[i].r ;
+            // 绘制圆
+            this.circle(x1,y1,r1)
+            for (let j = i+1; j < this.num; j++) {
+              let x2 = this.data[j].x;
+              let y2 = this.data[j].y;
+              let r2 = this.data[j].r;
+              // 当两点之间小于 100 时 连线
+              if (Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) <=  60 * 80) {
+                 this.line(x1,y1,x2,y2)
+              }
+            }
+            // 移动
+            this.data[i].x += this.data[i].moveX;
+            this.data[i].y += this.data[i].moveY;
+            // 界限 反弹
+            if(this.data[i].x <= 0  ||  this.data[i].x >= this.width){
+              this.data[i].moveX = -this.data[i].moveX;
+            }
+            if(this.data[i].y <= 0  ||  this.data[i].y >= this.height ){
+              this.data[i].moveY = -this.data[i].moveY;
+            }
+          }
+        },
+        // 画线
+        line(x1,y1,x2,y2){
+          this.ctx.beginPath()
+          let color = this.ctx.createLinearGradient(x1,y1,x2,y2) 
+          color.addColorStop(0,"#000")
+          color.addColorStop(1,"pink")
+          this.ctx.strokeStyle = color
+          this.ctx.moveTo(x1, y1)
+          this.ctx.lineTo(x2, y2)
+          this.ctx.closePath()
+          this.ctx.stroke()  
+        },
+        // 鼠标移动连接线
+        handleMouse(event){
+          let x1 = event.clientX;
+          let y1 = event.clientY;
+          for(let i =0;i<this.num;i++){
+            let x2 = this.data[i].x;
+            let y2 = this.data[i].y;
+            if (Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) <=  100 * 100) {
+                this.line(x1,y1,x2,y2)
+            }
+          }
+        }
+      }
+      let xuxin = new  MyCanvas(200)
+  </script>
+</body>
+</html>
