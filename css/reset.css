@@ -14,7 +14,7 @@
     }
     #asid{
         width:200px;
-        background:url("../images/0.jpg");
+        /* background:url("../images/0.jpg"); */
         background-size:200px 200px;
     }
 }

@@ -35,7 +35,7 @@ a{
   top: 0;
   z-index:666;
   opacity: 0.5;
-  background:url("../images/0.jpg")no-repeat 0px 0px  / 100% 100%;
+  /* background:url("../images/0.jpg")no-repeat 0px 0px  / 100% 100%; */
 }
 button{
   padding: 4px;
