@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body{
+            background-color: black;
+        }
+        /*烟花爆炸动画*/
+        .fireworks{
+            position: absolute;
+            left: 180px;
+            bottom: 500px;
+            animation-name: fireworks;
+            animation-iteration-count: infinite ;
+            animation-delay: 2.5s;
+            animation-duration: 3s;
+            transform: scale(0);
+        }
+        @keyframes fireworks{
+            0%{
+                transform: scale(0);
+            }
+            80%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+        /*烟花升天动画*/ 
+        .firecracker{
+            position: absolute;
+            left: 300px;
+            bottom: 0px;
+            animation-iteration-count: infinite ;
+            animation-name: firecracker;
+            animation-duration: 3s;
+        }
+        @keyframes firecracker{
+            0%{
+                transform: scale(1);
+            }
+
+            100%{
+                transform: scale(0);
+                bottom: 600px;
+                 left: 300px;
+
+            }
+        }
+    </style>
+</head>
+<body>  
+        <img src="./30.png" class="fireworks" width="300px" height="300px">
+        <img src="./84.png" class="firecracker" width="20px" height="40px">
+</body>
