@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>moban</title>
+  <style>
+    body,h1,h2,h3,h4,h5,h6,ul,ol,p{margin:0;font-weight: normal}
+    ul,ol{padding:0; list-style:none;}
+    a{text-decoration: none;}
+    #box{
+      width: 1000px;
+      height: 600px;
+      background: #ccc;
+      margin: 50px auto 0;
+    }
+    .wrap{
+      width: 1000px;
+      margin: 0px auto;
+    }
+  </style>
+</head>
+<body>
+ 
+  <div id="box">请把图片拖拽至改区域</div>
+  <div class="wrap">
+    <p>当前图片<span class="item">0</span>张,多少<span class="kb">0</span>M</p>
+    <input type="file">
+    <button class="btu">清空</button>
+  </div>
+
+
+  <script>
+    let box = document.getElementById("box")
+    let item = document.getElementsByClassName("item")[0]
+    let kb = document.getElementsByClassName("kb")[0]
+    let btu = document.getElementsByClassName("btu")[0]
+
+    let arr = []; // 保存上传图片的每一项
+    box.addEventListener("dragover",(ev)=>{
+      // 去除浏览器的默认事件=> 不会触发drop事件 
+      ev.preventDefault()
+      if(box.innerText == "请把图片拖拽至改区域"){
+        box.innerText = ""
+      }
+    })
+    box.addEventListener("drop",(ev)=>{
+      // 去除浏览器的默认事件 => 默认打开图片
+      ev.preventDefault()
+      // 拖拽会将默认数据放在 event.dataTransfer.files
+      let files = ev.dataTransfer.files
+      // 循环每一项
+      appendFile(files)
+      // 计算函数
+      computed()
+    })
+
+    function appendFile(files){
+      for(let i=0;i<files.length;i++){
+        // 生成blod   参数需要是数组格式的
+        console.log(files[i]);
+        let blob = new Blob([files[i]]);
+        // 生成blod 链接
+        arr.push(files[i])
+        let url = URL.createObjectURL(blob);
+        console.log(url);
+        // 创建图片
+        let oImg = new Image()
+        console.log(url);
+        oImg.src = url; // 异步代码
+        oImg.width=200;
+        oImg.height = 200;
+        oImg.onload=function(){
+          box.appendChild(oImg)
+        }
+      }
+    }
+
+    function computed(){
+      item.innerText = arr.length
+      let result  = arr.reduce((pecu,next)=>pecu + next.size,0)/1024/1024
+      // 数值.toFixed(参数)  保留几位数
+      kb.innerText = result.toFixed(2);
+    }
+
+    btu.onclick=function(){
+      box.innerHTML = ""
+      box.innerHTML = "请把图片拖拽至改区域"
+      arr = []
+      computed()
+    }
+  </script>
+</body>
+</html>

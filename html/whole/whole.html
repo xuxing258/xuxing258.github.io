@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script type="text/javascript">
+
+            var a = 123;
+            function fun(){
+                console.log(a);
+                var a = 456;
+                console.log(a);
+            }
+            fun();
+            console.log(a);
+
+            //---------------------------------------------------
+
+            var b = 123;
+            function fun(){
+                console.log("b = "+b);
+                b = 456;
+            }
+            fun();
+            console.log("b = "+b);
+
+            //---------------------------------------------------
+
+            var c = 123;
+            function fun(c){
+                console.log("c = "+c);
+                c = 456;
+            }
+            fun();
+            console.log("c = "+c);
+
+            //---------------------------------------------------
+
+            var d = 123;
+            function fun(d){
+                console.log("d1 = "+d);
+                d = 456;
+            }
+            fun(789);
+            console.log("d = "+d);
+
+            //---------------------------------------------------
+            var a = 33;
+            function fu(a) {
+              console.log(a);
+              var a = 123;
+              console.log(a);
+              function a() {
+                console.log(a);
+              }
+              console.log(b);
+              var b = function () { }
+              console.log(b);
+              function b() { }
+            }
+            console.log(a)
+            fu(2);
+
+            //---------------------------------------------------
+            function test(a, b) {
+              console.log(a);
+              c = 0;
+              var c;
+              a = 3;
+              b = 2;
+              console.log(b);
+              function b() { }
+              function d() { }
+              console.log(d);
+            }
+            test(2);
+
+
+            //---------------------------------------------------
+
+            fn();
+            console.log(a);
+            var a = 10;
+            console.log(a);
+            function fn(){
+                var a = 1;
+                
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
