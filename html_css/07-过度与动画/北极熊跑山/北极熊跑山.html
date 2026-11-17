@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      @keyframes move {
+        to {
+          transform: translate(-50%);
+        }
+      }
+      @keyframes move1 {
+        to {
+          left: 50%;
+          transform: translate(-50%);
+        }
+      }
+      @keyframes move2 {
+        to {
+          transform: translate(-100%);
+        }
+      }
+      /*背景颜色 */
+      body {
+        background-color: skyblue;
+      }
+      /* 山体移动 */
+      .hill {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 200%;
+        animation: move 5s infinite linear;
+      }
+      /* 黑色减速 */
+      .black {
+        animation: move 10s infinite linear;
+      }
+      /* 山大小 */
+      .fm {
+        float: left;
+        width: 50%;
+      }
+      /* 北极熊 */
+      .box1 {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        width: calc(1600px / 8);
+        height: 100px;
+        animation: move1 5s linear forwards;
+      }
+      .box1 .bear2 {
+        animation: move2 1s steps(8) infinite;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <!-- 黑山 -->
+    <div class="hill black">
+      <img class="fm" src="./bg1.png" alt="" />
+      <img class="fm" src="./bg1.png" alt="" />
+    </div>
+    
+    <div class="hill">
+      <img class="fm" src="./bg2.png" alt="" />
+      <img class="fm" src="./bg2.png" alt="" />
+    </div>
+
+    <div class="box1">
+      <img class="bear2" src="./bear.png" alt="" />
+    </div>
+  </body>
+</html>

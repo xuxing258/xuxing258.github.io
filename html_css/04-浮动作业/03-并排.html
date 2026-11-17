@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+        body,p,h1,h2,h3,h4,h5,h6,ul,ol,li{margin:0;padding:0}
+        a{text-decoration: none;color: black}
+        ul,ol{list-style: none}
+        .wrap{
+            height: 50px;
+            background-color: #459df5;
+        }
+        .nav-list{
+            width: 1200px;
+            height: 50px;
+            margin: 0px auto;
+            background-color: green;
+        }
+
+        .wrap .nav-list li{
+            /* 并排成一行 */
+            padding: 0px 20px;
+            float: left;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+
+        .wrap .nav-list li:nth-child(1):hover{
+            background-color: red;
+        }
+
+        .wrap .nav-list li:nth-child(2):hover{
+            background-color: pink;
+        }
+        .wrap .nav-list li:nth-child(3):hover{
+            background-color: yellow;
+        }
+     
+  </style>
+</head>
+<body>
+   <div class="wrap">
+        <ul class="nav-list">
+            <li>首页</li>
+            <li>秒懂白科</li>
+            <li>特色百科</li>
+            <li>知识专题</li>
+            <li>加入百科</li>
+            <li>百科团队</li>
+            <li>权威合作</li>
+        </ul>
+   </div>
+</body>
+</html>

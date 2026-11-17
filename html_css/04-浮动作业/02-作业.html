@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+        body,p,h1,h2,h3,h4,h5,h6,ul,ol,li{margin:0;padding:0}
+        a{text-decoration: none;color: black}
+        ul,ol{list-style: none}
+        .wrap{
+            height: 50px;
+            background-color: #459df5;
+        }
+        .nav{
+            width: 1200px;
+            height: 50px;
+            margin:0px auto;
+        }
+
+        .wrap .nav-list{
+            height: 50px;
+            float: left;
+        }
+        .wrap .nav-list li{
+            /* 并排成一行 */
+            padding: 0px 20px;
+            float: left;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+
+        .wrap .nav-list li:nth-child(1):hover{
+            background-color: red;
+        }
+
+        .wrap .nav-list li:nth-child(2):hover{
+            background-color: green;
+        }
+
+        .wrap .nav_login{
+            width: 100px;
+            height: 50px;
+            /* 如果上一个兄弟标签是普通标签, 相当于自身水平位置向右移动 */
+            float: right;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .wrap .nav_login span{
+            line-height: 50px;
+        }
+        .wrap .nav_login span:nth-child(1){
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background:  url("./img/个人中心.png")no-repeat center / cover;
+            /* 请问一行行内 与 行内块如何设置对齐 */
+            vertical-align: -3px;
+        }
+        .wrap .nav_login span:nth-child(1):hover{
+            background:  url("./img/个人.png")no-repeat center / cover;
+        }
+  </style>
+</head>
+<body>
+   <div class="wrap">
+        <div class="nav">
+            <!-- 导航左边 -->
+            <ul class="nav-list">
+                <li>首页</li>
+                <li>秒懂白科</li>
+                <li>特色百科</li>
+                <li>知识专题</li>
+                <li>加入百科</li>
+                <li>百科团队</li>
+                <li>权威合作</li>
+            </ul>
+            <!-- 导航登录 -->
+            <div class="nav_login">
+                <!-- 背景图片标签 -->
+                <span></span>
+                <span>个人中心</span>
+            </div>
+        </div>
+   </div>
+
+   <!-- 
+        自适应居中: 利用margin:0px auto水平居中原理
+            - 浏览器宽度比设置宽度大 我就居中不影响展示内容,    宽度小就出现滚动条件展示所有内容
+
+       
+
+    
+        
+   -->
+</body>
+</html>

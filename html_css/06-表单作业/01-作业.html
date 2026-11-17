@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+        body,p,h1,h2,h3,h4,h5,h6,ul,ol,li{margin:0;padding:0}
+        a{text-decoration: none;color: black}
+        ul,ol{list-style: none}
+        input{
+            outline: none;
+        }
+        body{
+            background-color: #eee;
+        }
+        .silde{
+            position: fixed;
+            right: 0;
+            top: 25%;
+            width: 50px;
+            height: 150px;
+            background-color: #aaa;
+            transition: all .5s ease 0s;
+        }
+        .silde:hover{
+            top: 22%;
+        }
+
+        /* 表单 */
+     .wrap {
+        width:  400px;
+        height: 335px;
+        background-color: #fff;
+        border-radius: 8px;
+        /* 水平垂直居中 */
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+     }
+     .wrap h3{
+        text-align: center;
+        height: 100px;
+        line-height: 100px;
+        font-size: 24px;
+     }
+     .wrap input{
+        width: 360px;
+        height: 40px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        padding-left: 10px;
+     }
+     .wrap>div{
+        text-align: center;
+     }
+
+     .wrap>div:nth-child(2){
+        margin-bottom: 20px;
+     }
+
+     .wrap .but{
+        width: 360px;
+        height: 40px;
+        border: 1px solid #2980b9;
+        background-color: #2980b9;
+        color: #fff;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        border-radius: 4px;
+        cursor: pointer;
+
+     }
+     .wrap .but:hover{
+        background-color: aqua;
+        border: 1px solid aqua;
+     }
+
+     .wrap p{
+        text-align: center;
+     }
+     .wrap p span{
+        cursor: pointer;
+     }
+     .wrap p span:hover{
+        cursor: pointer;
+        color: #2980b9;
+     }
+  </style>
+</head>
+<body>
+    <!-- input是一个行内块标签 text-align  设置行内或行内块居中需要设置父级-->
+   <div class="wrap">
+        <h3>登录</h3>
+        <!-- div是块级标签 默认基础父级宽度 -->
+        <div>
+            <input type="text" placeholder="用户名">
+        </div>
+        <div>
+            <input type="password" placeholder="密码">
+        </div>
+        <div>
+            <button class="but">登录</button>
+        </div>
+        <p>还没有账号? <span>注册</span></p>
+   </div>
+</body>
+</html>

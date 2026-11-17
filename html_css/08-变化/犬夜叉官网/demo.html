@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佩灿老师 key.l</title>
+    <style>
+        body {
+            margin: 0;/* 外边距 */
+            /* font-family: "Microsoft yahei", Arial; */
+            background: url(img/bgi.jpg) no-repeat;
+        }
+
+        .box{
+            width: 1000px;/* 宽度 */
+            height: 600px;/* 高度 */
+            margin: 50px 100px;/* 外边距 */
+            /* background-color: aqua; */
+            /* 背景颜色 */
+        }
+        ul{
+            margin: 0;/* 外边距 */
+            padding: 0;/* 内边距 */
+            list-style: none;/* 去除小圆点 */
+        }
+        ul li {
+            position: relative;/* 相对定位 */
+            overflow: hidden;/* 溢出隐藏 */
+            float: left;/* 浮动 */
+            margin-right: 100px ;/* 右边外边距 */
+            width: 400px;
+            height: 600px;
+            background: #979797;
+            /* 背景颜色 */
+        }
+        ul li img{
+            width: 400px;
+            height: 600px;
+        }
+        .cover {
+            position: absolute;/* 绝对定位 */
+            left: 0;/* 居上 */
+            top: 0;/* 居左 */
+            width: 400px;
+            height: 600px;
+            background: rgba(230, 19, 166, 0.7);/* 背景颜色 */
+            transform-origin: right bottom;	/* 设计变形基点位置 */
+            transform: rotate(90deg);	/* 变形 旋转 */
+            transition:  .5s;	/* 过渡 */
+        }
+        p {
+            font-size: 14px;/* 字体大小 */
+            color: #ffffff;
+            text-indent: 28px;/* 首行缩进 */
+            line-height: 50px; /* 行高 */
+            padding: 0 50px;/* 内边距 */
+        }
+
+        li:hover .cover {/* 鼠标移入 */
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"><!-- 盒子标签  -->
+        <ul><!-- 无序列表 容器里装载着结构，样式一致的文字或图表-->
+            <li><!-- 列表项 -->
+                <img src="img/1.jpg" />
+                <div class="cover">
+                    <p>桔梗，战国时代灵力数一数二的巫女，负责守护及净化四魂之玉，以强大的灵力与精准的箭术击退对玉虎视眈眈的妖怪们 ，
+                        是犬夜叉最心爱的女子之一。后来桔梗被暗恋者鬼蜘蛛所嫉妒。
+                        鬼蜘蛛托生的半妖奈落设计使二人反目成仇。重伤的桔梗忍痛将携玉逃跑的犬夜叉封印，随后带玉身亡。</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/2.png" />
+                <div class="cover">
+                    <p>犬夜叉,是大妖怪犬大将与人类公主十六夜所生的半妖，
+                        因为半妖身份而被人类和妖怪所排斥，为此犬夜叉想通过四魂之玉的力量使自己变成完全的妖怪，
+                        后在争夺四魂之玉中爱上了人类女子桔梗而想变成人类，后来被奈落使用离间计陷害，
+                        与桔梗反目成仇，在盗取四魂之玉时，被桔梗封印五十年，桔梗带玉身亡。</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>
+
+

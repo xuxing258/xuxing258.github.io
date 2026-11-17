@@ -1,0 +1,63 @@
+<!--  网页模板代码 快捷键 ! + tab 自动生成   -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>/* css样式表 */
+      /* 选择需要装饰的标签 */
+        *{
+            margin: 0;	/* 外边距 */
+            background-color: cadetblue;
+            /* 背景 颜色 */
+        }
+        .box{
+            margin: 100px auto;/* 外边距 */
+            width: 870px;/* 宽度 */
+            height: 500px;/* 高度 */
+            /* background-color: green;	 */
+             /* 背景 颜色 */
+        }
+        .list{
+            /* display: inline-block; */
+            float: left;
+            overflow: hidden;/* 溢出隐藏 */
+            /* float: left;浮动 */
+            width: 200px;
+            height: 500px;
+            background-color: pink; /* 背景 颜色 */
+            transition: 2s;
+            /* 过渡 */
+        }
+        img{
+            height: 500px;
+        }
+        .box:hover .list{/* 鼠标移入 */
+            width: 80px;
+        }
+        .box .list:hover{
+            width: 700px;
+        }
+    </style>
+</head>
+<body><!-- 身体标签 存放给用户看的内容 区域 -->
+    <div class="box"><!-- 盒子标签  -->
+        <div class="list">
+            <img src="img/1.jpg" width="" height="" alt="龙珠">
+            <!-- img四要素 图片路径 原始宽度 原始高度 关键词 -->
+        </div>
+        <div class="list">
+            <img src="img/2.jpg" width="" height="" alt="龙珠">
+            <!-- img四要素 图片路径 原始宽度 原始高度 关键词 -->
+        </div>
+        <div class="list">
+            <img src="img/3.jpg" width="" height="" alt="龙珠">
+            <!-- img四要素 图片路径 原始宽度 原始高度 关键词 -->
+        </div>
+    </div>
+
+    <!-- ！ + tab -->
+</body>
+</html>
